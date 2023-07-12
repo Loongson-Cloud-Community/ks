@@ -8,7 +8,7 @@ func GetPluginAbleComponents() []string {
 	}
 }
 
-//GetKubeShpereDeployment returns the deployment of KubeSphere
+// GetKubeShpereDeployment returns the deployment of KubeSphere
 func GetKubeShpereDeployment() []string {
 	return []string{
 		"apiserver", "controller", "console", "jenkins", "installer",

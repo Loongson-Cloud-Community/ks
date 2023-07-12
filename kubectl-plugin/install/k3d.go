@@ -126,7 +126,7 @@ func (o *k3dOption) runE(cmd *cobra.Command, args []string) (err error) {
 	return
 }
 
-//getAgentPort get the agent port string via local command `k3d version`
+// getAgentPort get the agent port string via local command `k3d version`
 func getAgentPort() (string, error) {
 	out, err := common.ExecCommandGetOutput("k3d", "version")
 	if err != nil {
@@ -146,7 +146,7 @@ func getAgentPort() (string, error) {
 	return "agent[0]", nil
 }
 
-//isGreaterThanV5 check if k3d version is greater than v5
+// isGreaterThanV5 check if k3d version is greater than v5
 func isGreaterThanV5(version string) (bool, error) {
 	c, _ := semver.NewConstraint(">= 5.0.0")
 	reg := regexp.MustCompile(`(\w+\.){2}\w+`)

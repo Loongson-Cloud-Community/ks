@@ -38,7 +38,7 @@ func ExecCommand(name string, arg ...string) (err error) {
 	return
 }
 
-//ExecCommandGetOutput run command and get output
+// ExecCommandGetOutput run command and get output
 func ExecCommandGetOutput(name string, arg ...string) (string, error) {
 	command := exec.Command(name, arg...)
 	output, err := command.CombinedOutput()
